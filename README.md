@@ -1,18 +1,13 @@
 # 🌐 Simulación e Implementación de Red Aplicada a una Biblioteca
 
-> 🚀 **Ver Documentación Web Interactiva del Proyecto:**  
-> 👉 **[https://miguelaprada.github.io/Red-de-biblioteca/](https://github.com/MiguelAPrada/Red-de-bibloteca)**
-
 Diseño, segmentación y configuración de una infraestructura de red cableada e inalámbrica para una biblioteca. Este proyecto abarca desde el diseño lógico y simulación en **Cisco Packet Tracer** hasta la documentación técnica y el despliegue a pequeña escala con enlaces de fibra óptica, routers, switches y puntos de acceso, separando el tráfico administrativo del acceso de invitados mediante subredes y portales cautivos.
 
 ---
 
 ## 📁 Archivos del Proyecto
 
-Haz clic en cualquiera de los siguientes documentos para visualizarlos en línea o descargarlos:
+Haz clic en cualquiera de los siguientes documentos para visualizarlos en línea o descargarlos directamente desde este repositorio:
 
-* 🌐 **[Página Web del Proyecto (GitHub Pages)](https://miguelaprada.github.io/Red-de-biblioteca/)**  
-  *Vista web interactiva con resumen de arquitectura, tabla de segmentación y enlaces directos de descarga.*
 * 🖥️ **[Descargar Simulación en Cisco Packet Tracer (`Proyecto 1.pkt`)](./Proyecto%201.pkt)**  
   *Archivo fuente de la topología de red con el direccionamiento IP, subredes y configuración de dispositivos.*
 * 📄 **[Ver Informe Técnico de Redes (`Informe técnico de redes.pdf`)](./Informe%20t%C3%A9cnico%20de%20redes.pdf)**  
@@ -24,9 +19,9 @@ Haz clic en cualquiera de los siguientes documentos para visualizarlos en línea
 
 ## 🛠️ ¿Cómo abrir y probar la simulación (`Proyecto 1.pkt`)?
 
-1. Haz clic en el enlace **`Proyecto 1.pkt`** en la lista de arriba (o descárgalo desde la [página web del proyecto](https://miguelaprada.github.io/Red-de-biblioteca/)).
-2. Si lo abres desde GitHub, presiona el botón **"Download raw file"** (ícono de descarga en la esquina superior derecha).
-3. Abre **Cisco Packet Tracer** en tu equipo (versión 8.2 o superior recomendada).
+1. Haz clic en el enlace **`Proyecto 1.pkt`** en la lista de arriba (o selecciónalo directamente en la lista de archivos de este repositorio).
+2. En la ventana que se abre, presiona el botón **"Download raw file"** (ícono de descarga ubicado en la esquina superior derecha).
+3. Abre **Cisco Packet Tracer** en tu computadora (se recomienda versión 8.2 o superior).
 4. Ve al menú **`File > Open`** (`Ctrl + O`) y selecciona el archivo `Proyecto 1.pkt` descargado.
 5. Utiliza el modo **Simulation** o envía paquetes (**Simple PDU**) entre los equipos de la red administrativa y la red de invitados para verificar el enrutamiento y el aislamiento entre subredes.
 
