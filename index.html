@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infraestructura de Red para Biblioteca | Miguel Ángel Prada</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b1120;
+            color: #e2e8f0;
+        }
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(56, 189, 248, 0.15);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-cyan-500 selection:text-slate-950">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 glass-card border-b border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-network-wired text-cyan-400 text-xl"></i>
+                <span class="font-bold text-slate-100 tracking-tight">RED BIBLIOTECA <span class="text-cyan-400 font-normal">| INFRAESTRUCTURA TI</span></span>
+            </div>
+            <div class="hidden md:flex space-x-6 text-sm font-medium text-slate-300">
+                <a href="#arquitectura" class="hover:text-cyan-400 transition">Arquitectura</a>
+                <a href="#segmentacion" class="hover:text-cyan-400 transition">Subredes y Seguridad</a>
+                <a href="#descargas" class="hover:text-cyan-400 transition">Entregables (.PKT / PDF)</a>
+            </div>
+            <a href="https://github.com/MiguelAPrada/Red-de-biblioteca" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-slate-200 px-3.5 py-1.5 rounded-lg text-sm font-medium border border-slate-700 transition flex items-center gap-2">
+                <i class="fa-brands fa-github"></i> Repositorio
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative py-20 overflow-hidden border-b border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold mb-6 mono">
+                <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                CISCO PACKET TRACER & DESPLIEGUE FÍSICO
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight mb-6">
+                Simulación e Implementación de <br class="hidden md:block">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">Red Aplicada a una Biblioteca</span>
+            </h1>
+            <p class="text-lg text-slate-400 max-w-3xl mb-8 leading-relaxed">
+                Diseño lógico y despliegue físico a escala de una red institucional cableada e inalámbrica. Incluye segmentación de tráfico mediante subredes independientes, portales cautivos diferenciados para personal administrativo e invitados, y troncalización con fibra óptica.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="./Proyecto%201.pkt" download class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold px-5 py-2.5 rounded-lg text-sm transition flex items-center gap-2 shadow-lg shadow-cyan-500/20">
+                    <i class="fa-solid fa-download"></i> Descargar Simulación (.pkt)
+                </a>
+                <a href="./Informe%20t%C3%A9cnico%20de%20redes.pdf" target="_blank" class="glass-card hover:border-cyan-400/50 text-slate-200 font-medium px-5 py-2.5 rounded-lg text-sm transition flex items-center gap-2">
+                    <i class="fa-solid fa-file-pdf text-rose-400"></i> Ver Informe Técnico (PDF)
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
+
+        <!-- Sección 1: Arquitectura -->
+        <section id="arquitectura">
+            <div class="mb-10">
+                <h2 class="text-2xl font-bold text-white flex items-center gap-3">
+                    <span class="text-cyan-400 mono text-lg">01.</span> Componentes de la Infraestructura
+                </h2>
+                <p class="text-slate-400 mt-2">Integración entre el entorno simulado en Cisco Packet Tracer y el montaje físico realizado en laboratorio.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass-card p-6 rounded-xl">
+                    <div class="w-12 h-12 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-xl mb-4">
+                        <i class="fa-solid fa-diagram-project"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-white mb-2">Topología y Enrutamiento</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Diseño jerárquico con routers, switches de distribución/acceso y puntos de acceso inalámbricos (AP), garantizando comunicación fluida entre áreas y salida controlada a WAN.
+                    </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-xl">
+                    <div class="w-12 h-12 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-xl mb-4">
+                        <i class="fa-solid fa-wifi"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-white mb-2">Portales Cautivos Duales</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Configuración de redes Wi-Fi aisladas con portales cautivos independientes: autenticación controlada para usuarios visitantes y acceso protegido para el personal de biblioteca.
+                    </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-xl">
+                    <div class="w-12 h-12 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-xl mb-4">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-white mb-2">Enlace de Fibra Óptica</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Implementación física a pequeña escala utilizando transceptores/conversores de medio, cableado estructurado UTP y enlaces de fibra óptica para interconexión troncal.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 2: Segmentación -->
+        <section id="segmentacion">
+            <div class="mb-10">
+                <h2 class="text-2xl font-bold text-white flex items-center gap-3">
+                    <span class="text-cyan-400 mono text-lg">02.</span> Segmentación Lógica de Subredes
+                </h2>
+                <p class="text-slate-400 mt-2">Aislamiento del tráfico mediante subnetting IPv4 para proteger los recursos internos de la biblioteca.</p>
+            </div>
+
+            <div class="glass-card rounded-xl overflow-hidden overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-900/90 border-b border-slate-800 text-xs uppercase tracking-wider text-slate-300 mono">
+                            <th class="py-4 px-6">Segmento / Zona</th>
+                            <th class="py-4 px-6">Medio de Acceso</th>
+                            <th class="py-4 px-6">Control de Acceso</th>
+                            <th class="py-4 px-6">Propósito Operativo</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800/80 text-sm">
+                        <tr class="hover:bg-slate-800/30 transition">
+                            <td class="py-4 px-6 font-semibold text-cyan-400">Red Administrativa</td>
+                            <td class="py-4 px-6 text-slate-300">Cableado UTP / Wi-Fi Privado</td>
+                            <td class="py-4 px-6 text-slate-400">Credenciales internas + Portal Admin</td>
+                            <td class="py-4 px-6 text-slate-300">Gestión bibliotecaria, servidores locales y estaciones de trabajo</td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/30 transition">
+                            <td class="py-4 px-6 font-semibold text-emerald-400">Red de Invitados</td>
+                            <td class="py-4 px-6 text-slate-300">Inalámbrico (Access Points)</td>
+                            <td class="py-4 px-6 text-slate-400">Portal Cautivo de Visitantes (Aislado)</td>
+                            <td class="py-4 px-6 text-slate-300">Navegación web pública sin visibilidad hacia la red interna</td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/30 transition">
+                            <td class="py-4 px-6 font-semibold text-amber-400">Enlace Troncal / Core</td>
+                            <td class="py-4 px-6 text-slate-300">Fibra Óptica / Enrutamiento</td>
+                            <td class="py-4 px-6 text-slate-400">Listas de control / Enrutamiento IP</td>
+                            <td class="py-4 px-6 text-slate-300">Interconexión de alta velocidad entre nodos principales</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Sección 3: Descargas y Entregables -->
+        <section id="descargas">
+            <div class="mb-10">
+                <h2 class="text-2xl font-bold text-white flex items-center gap-3">
+                    <span class="text-cyan-400 mono text-lg">03.</span> Entregables y Archivos del Proyecto
+                </h2>
+                <p class="text-slate-400 mt-2">Descarga el archivo fuente para abrirlo en Cisco Packet Tracer o consulta la documentación técnica completa.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Archivo 1: PKT -->
+                <div class="glass-card p-6 rounded-xl flex flex-col justify-between border-t-2 border-t-cyan-400">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="mono text-xs px-2.5 py-1 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">CISCO PACKET TRACER</span>
+                            <i class="fa-solid fa-network-wired text-slate-500"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Proyecto 1.pkt</h3>
+                        <p class="text-sm text-slate-400 mb-6">
+                            Archivo de simulación interactiva con la topología completa, direccionamiento IP, DHCP y pruebas de conectividad.
+                        </p>
+                    </div>
+                    <a href="./Proyecto%201.pkt" download class="w-full py-2.5 px-4 rounded-lg bg-cyan-500/10 hover:bg-cyan-500 hover:text-slate-950 text-cyan-400 border border-cyan-500/30 font-semibold text-sm text-center transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-download"></i> Descargar .PKT
+                    </a>
+                </div>
+
+                <!-- Archivo 2: Informe -->
+                <div class="glass-card p-6 rounded-xl flex flex-col justify-between border-t-2 border-t-rose-400">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="mono text-xs px-2.5 py-1 rounded bg-rose-500/10 text-rose-400 border border-rose-500/20">DOCUMENTO TÉCNICO</span>
+                            <i class="fa-solid fa-file-pdf text-slate-500"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Informe técnico de redes.pdf</h3>
+                        <p class="text-sm text-slate-400 mb-6">
+                            Memoria técnica con tablas de subnetting, arquitectura lógica/física, configuración de equipos y resultados de pruebas.
+                        </p>
+                    </div>
+                    <a href="./Informe%20t%C3%A9cnico%20de%20redes.pdf" target="_blank" class="w-full py-2.5 px-4 rounded-lg bg-rose-500/10 hover:bg-rose-500 hover:text-white text-rose-400 border border-rose-500/30 font-semibold text-sm text-center transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-eye"></i> Abrir / Descargar PDF
+                    </a>
+                </div>
+
+                <!-- Archivo 3: Modulo 6 -->
+                <div class="glass-card p-6 rounded-xl flex flex-col justify-between border-t-2 border-t-emerald-400">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="mono text-xs px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">GUÍA DE IMPLEMENTACIÓN</span>
+                            <i class="fa-solid fa-book text-slate-500"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Modulo 6 - Redes.pdf</h3>
+                        <p class="text-sm text-slate-400 mb-6">
+                            Entregable estructurado del módulo de redes con el paso a paso del montaje, configuración y validación.
+                        </p>
+                    </div>
+                    <a href="./Modulo%206%20-%20Redes.pdf" target="_blank" class="w-full py-2.5 px-4 rounded-lg bg-emerald-500/10 hover:bg-emerald-500 hover:text-slate-950 text-emerald-400 border border-emerald-500/30 font-semibold text-sm text-center transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-eye"></i> Abrir / Descargar PDF
+                    </a>
+                </div>
+            </div>
+
+            <!-- Instrucciones rápidas Packet Tracer -->
+            <div class="mt-8 glass-card p-6 rounded-xl border-l-4 border-l-cyan-400">
+                <h4 class="text-sm font-bold text-white uppercase tracking-wider mono mb-2">
+                    <i class="fa-solid fa-circle-info text-cyan-400 mr-2"></i> Instrucciones para ejecutar Proyecto 1.pkt
+                </h4>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    1. Descarga el archivo <code class="text-cyan-300 bg-slate-900 px-1.5 py-0.5 rounded">Proyecto 1.pkt</code> desde la tarjeta superior. &nbsp;|&nbsp; 
+                    2. Ábrelo con <strong>Cisco Packet Tracer</strong> (v8.2 o superior). &nbsp;|&nbsp; 
+                    3. Usa la herramienta <strong>Simple PDU</strong> o el modo <strong>Simulation</strong> para comprobar la conectividad dentro de cada subred y el aislamiento entre invitados y administración.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800/80 py-10 bg-slate-950/60">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+            <div>
+                <p>© 2026 Miguel Ángel Prada Álvarez • Soporte TI & Mecatrónica</p>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="https://miguelaprada.github.io/Portafolio/" target="_blank" class="hover:text-cyan-400 transition">Portafolio Principal</a>
+                <a href="https://github.com/MiguelAPrada/Red-de-biblioteca" target="_blank" class="hover:text-cyan-400 transition">Código Fuente</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
