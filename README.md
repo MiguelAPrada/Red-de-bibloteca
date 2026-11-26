@@ -1,7 +1,7 @@
 # 🌐 Simulación e Implementación de Red Aplicada a una Biblioteca
 
 > 🚀 **Ver Documentación Web Interactiva del Proyecto:**  
-> 👉 **[https://miguelaprada.github.io/Red-de-biblioteca/](https://miguelaprada.github.io/Red-de-biblioteca/)**
+> 👉 **[https://miguelaprada.github.io/Red-de-biblioteca/](https://github.com/MiguelAPrada/Red-de-bibloteca)**
 
 Diseño, segmentación y configuración de una infraestructura de red cableada e inalámbrica para una biblioteca. Este proyecto abarca desde el diseño lógico y simulación en **Cisco Packet Tracer** hasta la documentación técnica y el despliegue a pequeña escala con enlaces de fibra óptica, routers, switches y puntos de acceso, separando el tráfico administrativo del acceso de invitados mediante subredes y portales cautivos.
 
